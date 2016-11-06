@@ -1,0 +1,176 @@
+﻿@model AssetTrackingSystem.Model.Models.ViewModels.GeneralCategoryCreateVM
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout/_layout.cshtml";
+}
+
+<section id="main-content">
+    <section class="wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header">
+                    <i class="fa fa-file-text-o"></i> General Category
+                </h3>
+                <ol class="breadcrumb">
+                    <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+                    <li><i class="icon_document_alt"></i>Asset</li>
+                    <li><i class="fa fa-file-text-o"></i>General Category Entry</li>
+                </ol>
+            </div>
+        </div>
+
+
+
+
+        <div class="row">
+
+            <div class="col-lg-12">
+
+                <section class="panel">
+                    <div class="panel-body">
+
+                        <div class="form-group">
+
+                            <div class="col-lg-7">
+
+                                <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal" onclick="clearTextBox();"><span class="icon_plus_alt2"></span> </button>
+
+                            </div>
+                            <label class="control-label col-lg-2" for="inputSuccess"><strong>Search By Code OR Name:</strong></label>
+                            <div class="col-lg-3">
+
+                                @Html.TextBoxFor(model => model.GeneralCategory.Name, new { @class = "form-control", @id = "search_input", @name = "Organization_code_search", @placeholder = "Search By Code Or Name" })
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+                    </div>
+
+
+
+
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    @*<button type="button" class="close" data-dissmiss="modal"><span aria-hidden="true">&times;</span></button>*@
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title" id="myModalLabel">Add Organization</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="organization_form">
+                                        <div class="form-group">
+                                            @Html.HiddenFor(model => model.GeneralCategory.Id)
+                                            @Html.LabelFor(model => model.GeneralCategory.Name)
+                                            @Html.TextBoxFor(model => model.GeneralCategory.Name, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(m => m.GeneralCategory.Name, null, new { @class = "text-danger" })
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.GeneralCategory.Code)
+                                            @Html.TextBoxFor(model => model.GeneralCategory.Code, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(m => m.GeneralCategory.Code, null, new { @class = "text-danger" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.GeneralCategory.Description)
+                                            @Html.TextBoxFor(model => model.GeneralCategory.Description, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(m => m.GeneralCategory.Description, null, new { @class = "text-danger" })
+                                        </div>
+
+                                    </form>
+                                    <div id="message">
+
+                                    </div>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" id="btnAdd" onclick="return Add();">Add</button>
+                                    <button type="button" class="btn btn-primary" id="btnUpdate" style="display: none;" onclick="Update();">Update</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </section>
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <div class="row">
+            <div class="col-lg-12">
+                <section class="panel">
+                    <header class="panel-heading">
+                        Organizations List
+                    </header>
+
+                    <table id="mydatatable" class="table table-striped table-advance table-hover ">
+                        <thead>
+
+                        <th>
+
+                            Name
+
+                        </th>
+                        <th>
+
+                            Code
+
+                        </th>
+                        <th>
+
+                            Description
+
+                        </th>
+                        
+                        <th>
+
+                            Action
+
+                        </th>
+
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+
+
+                </section>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <!-- page end-->
+    </section>
+</section>
+
+@section scripts{
+
+
+
+    <script src="~/Scripts/GeneralCategory/GeneralCategory.js"></script>
+
+
+
+}
+

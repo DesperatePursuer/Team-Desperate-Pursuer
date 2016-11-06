@@ -1,0 +1,140 @@
+﻿@model AssetTrackingSystem.Models.Organization
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/Layout/_layout.cshtml";
+}
+
+
+
+<section id="main-content">
+    <section class="wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header"><i class="fa fa-file-text-o"></i> Organizations
+                </h3>
+                <ol class="breadcrumb">
+                    <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+                    <li><i class="icon_document_alt"></i>Organization</li>
+                    <li><i class="fa fa-file-text-o"></i>Organization Entry</li>
+                </ol>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <section class="panel">
+                    <header class="panel-heading">
+                        Organization
+                    </header>
+
+
+                    @if (ViewBag.Message != null)
+                    {
+                        <div id="message_success" class="alert alert-success">
+                            <strong>@ViewBag.Message</strong>
+                        </div>
+
+                    }
+
+
+
+                    <div class="panel-body">
+
+                        @using (Html.BeginForm("Create", "Organization", FormMethod.Post, new {@class = "form-horizontal", role = "form"}))
+                        {
+
+
+
+                            <div class="form-group">
+
+                                @Html.LabelFor(m => m.Name, new {@class = "col-sm-2 control-label"})
+                                <div class="col-sm-10">
+
+                                    @Html.TextBoxFor(m => m.Name, new {@class = "form-control"})
+                                    @Html.ValidationMessageFor(m=>m.Name, null, new {@class= "text-danger"})
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+
+                                @Html.LabelFor(m => m.ShortName, new {@class = "col-sm-2 control-label"})
+                                <div class="col-sm-10">
+
+                                    @Html.TextBoxFor(m => m.ShortName, new {@class = "form-control"})
+                                    @Html.ValidationMessageFor(m => m.ShortName, null, new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                                @Html.LabelFor(m => m.Code, new {@class = "col-sm-2 control-label"})
+                                <div class="col-sm-10">
+
+                                    @Html.TextBoxFor(m => m.Code, new {@class = "form-control"})
+                                    @Html.ValidationMessageFor(m => m.Code, null, new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                                @Html.LabelFor(m => m.Location, new {@class = "col-sm-2 control-label"})
+                                <div class="col-sm-10">
+
+                                    @Html.TextBoxFor(m => m.Location, new {@class = "form-control"})
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+
+
+
+                                <div class="col-sm-10" align="right">
+                                    <button type="submit" id="submit" class="btn btn-primary col-sm-2">Save</button>
+
+                                </div>
+                            </div>
+
+
+
+                        }
+
+
+
+
+
+                    </div>
+                </section>
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+        <!-- page end-->
+    </section>
+</section>
+
+
+
+@section scripts {
+
+
+    <script>
+        $(document).ready(function() {
+            $("#message_success").fadeTo(2000, 500).slideUp(500, function () {
+
+                $("#message_success").slideUp(500);
+
+
+            });
+
+        });
+
+
+    </script>
+
+
+}

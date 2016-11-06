@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="wIdth=device-wIdth, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>Organization</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- bootstrap theme -->
+    <link href="~/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <!--external css-->
+    <!-- font icon -->
+    <link href="~/assets/css/elegant-icons-style.css" rel="stylesheet" />
+    <link href="~/assets/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- date picker -->
+    <!-- color picker -->
+    <!-- Custom styles -->
+    <link href="~/assets/css/style.css" rel="stylesheet">
+    <link href="~/assets/css/style-responsive.css" rel="stylesheet"/>
+
+    <link href="~/Content/DataTables/css/dataTables.bootstrap.css" rel="stylesheet" />
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+      <script src="js/lte-ie7.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <!-- container section start -->
+    <section id="container" class="">
+        <!--header start-->
+        <header class="header dark-bg">
+            <div class="toggle-nav">
+                <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
+            </div>
+
+            <!--logo start-->
+            <a href="" class="logo">Asset Tacking <span class="lite">System</span></a>
+            <!--logo end-->
+
+
+
+            <div class="top-nav notification-row">
+               
+
+              
+              
+                <!-- user login dropdown end -->
+
+            </div>
+        </header>
+        <!--header end-->
+        <!--sIdebar start-->
+        <aside>
+            <div id="sidebar" class="nav-collapse ">
+                <!-- sIdebar menu start-->
+                <ul class="sidebar-menu">
+
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon_document_alt"></i>
+                            <span>Organization</span>
+                            <span class="menu-arrow arrow_carrot-right"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="~/Organization/Home">Organizations</a></li>
+                            <li><a class="" href="~/OrganizationBranch/Search">Organization's Branches</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon_document_alt"></i>
+                            <span>Asset Setup</span>
+                            <span class="menu-arrow arrow_carrot-right"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="~/GeneralCategory/">General Category</a></li>
+                            <li><a class="" href="~/Category/">Category</a></li>
+                            <li><a class="" href="~/SubCategory/">Sub Category</a></li>
+                            <li><a class="" href="~/ProductModel/">Product Model</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon_document_alt"></i>
+                            <span>User & Role Setup</span>
+                            <span class="menu-arrow arrow_carrot-right"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="">User Setup</a></li>
+                            <li><a class="" href="">Role Setup</a></li>
+                            <li><a class="" href="">User wise Role Setup</a></li>
+                            <li><a class="" href="">Role permission for Menu Setup</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon_document_alt"></i>
+                            <span>Operation</span>
+                            <span class="menu-arrow arrow_carrot-right"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="~/AssetPurchaseEntry/">Asset Purchase Entry</a></li>
+                            <li><a class="" href="">Asset Registration</a></li>
+                            <li><a class="" href="">Asset Movement Entry</a></li>
+                            <li><a class="" href=""> Movement Receive Entry</a></li>
+                            <li><a class="" href=""> Asset Movement Cancel</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon_document_alt"></i>
+                            <span>Report</span>
+                            <span class="menu-arrow arrow_carrot-right"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="~//">Asset List Report</a></li>
+                            <li><a class="" href="">Location wise Asset Report</a></li>
+                            <li><a class="" href="">Asset  Tracking History</a></li>
+                            <li><a class="" href="">Warranty Tracking Report</a></li>
+                            
+                        </ul>
+                    </li>
+
+
+
+
+
+
+
+                </ul>
+                <!-- sIdebar menu end-->
+            </div>
+        </aside>
+        <!--sIdebar end-->
+
+        @RenderBody()
+
+
+
+    </section>
+    <!-- container section end -->
+    <!-- javascripts -->
+    <script src="~/assets/js/jquery.js"></script>
+    <script src="~/assets/js/bootstrap.min.js"></script>
+    <!-- nice scroll -->
+    <script src="~/assets/js/jquery.scrollTo.min.js"></script>
+    <script src="~/assets/js/jquery.nicescroll.js" type="text/javascript"></script>
+
+    <!-- jquery ui -->
+    <script src="~/assets/js/jquery-ui-1.9.2.custom.min.js"></script>
+
+    <!--custom checkbox & radio-->
+    <script type="text/javascript" src="~/assets/js/ga.js"></script>
+    <!--custom switch-->
+    <script src="~/assets/js/bootstrap-switch.js"></script>
+    <!--custom tagsinput-->
+    <script src="~/assets/js/jquery.tagsinput.js"></script>
+
+    <!-- colorpicker -->
+    <!-- bootstrap-wysiwyg -->
+    <script src="~/assets/js/jquery.hotkeys.js"></script>
+    <script src="~/assets/js/bootstrap-wysiwyg.js"></script>
+    <script src="~/assets/js/bootstrap-wysiwyg-custom.js"></script>
+    <!-- ck editor -->
+    <script type="text/javascript" src="~/assets/ckeditor/ckeditor.js"></script>
+    <!-- custom form component script for this page-->
+    <script src="~/assets/js/form-component.js"></script>
+    <!-- custome script for all page -->
+<script src="~/assets/js/scripts.js"></script>
+    <script src="~/Scripts/DataTables/jquery.dataTables.js"></script>
+    <script src="~/Scripts/DataTables/dataTables.bootstrap.js"></script>
+    
+    @RenderSection("scripts", false)
+
+
+</body>
+</html>
