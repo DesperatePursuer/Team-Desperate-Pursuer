@@ -1,4 +1,4 @@
-﻿@model AssetTrackingSystem.Model.Models.ViewModels.ProductModelVM
+﻿@model AssetTrackingSystem.Model.Models.ViewModels.AssetLocationVM
 
 @{
     ViewBag.Title = "Index";
@@ -10,12 +10,12 @@
         <div class="row">
             <div class="col-lg-12">
                 <h3 class="page-header">
-                    <i class="fa fa-file-text-o"></i> Product Model
+                    <i class="fa fa-file-text-o"></i> Asset Location
                 </h3>
                 <ol class="breadcrumb">
                     <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
-                    <li><i class="icon_document_alt"></i>Asset</li>
-                    <li><i class="fa fa-file-text-o"></i>Product Model</li>
+                    <li><i class="icon_document_alt"></i>Organization</li>
+                    <li><i class="fa fa-file-text-o"></i>Asset Location</li>
                 </ol>
             </div>
         </div>
@@ -40,7 +40,7 @@
                             <label class="control-label col-lg-2" for="inputSuccess"><strong>Search By Code OR Name:</strong></label>
                             <div class="col-lg-3">
 
-                                @Html.TextBoxFor(model => model.ProductModel.Name, new { @class = "form-control", @id = "search_input", @name = "search_input", @placeholder = "Search By Code Or Name" })
+                                @Html.TextBoxFor(model => model.AssetLocation.Name, new { @class = "form-control", @id = "search_input", @name = "search_input", @placeholder = "Search By Code Or Name" })
                             </div>
                         </div>
 
@@ -66,42 +66,29 @@
                                 <div class="modal-body">
                                     <form id="organization_form">
                                         <div class="form-group">
-                                            @Html.DropDownList("GeneralCategoryId", new SelectList(Model.GeneralCategoryList, "Value", "Text"), new {@class = "form-control"})
+                                            @Html.DropDownList("OrganizationId", new SelectList(Model.OrganizationList, "Value", "Text"), new { @class = "form-control" })
 
 
                                         </div>
                                         <div class="form-group">
-
-                                           
-
-                                            @Html.DropDownListFor(m => m.SubCategoryList, Enumerable.Empty<SelectListItem>(), "--Select Category--", new {id = "CategoryId", @class = "form-control"})
+                                            @Html.DropDownListFor(m => m.AssetLocation.OrganizationBranchId, Enumerable.Empty<SelectListItem>(), "--Select Branch--", new { id = "organizationBranchId", @class = "form-control" })
+                                            @Html.ValidationMessageFor(m => m.AssetLocation.OrganizationBranchId)
 
 
                                         </div>
                                         <div class="form-group">
-                                            @Html.DropDownListFor(m => m.ProductModel.SubCategoryId, Enumerable.Empty<SelectListItem>(), "--Select Category--", new { id = "subcategoryId", @class = "form-control" })
-                                            @Html.ValidationMessageFor(m => m.ProductModel.SubCategoryId)
-
-
+                                            @Html.HiddenFor(model => model.AssetLocation.Id)
+                                            @Html.LabelFor(model => model.AssetLocation.Name)
+                                            @Html.TextBoxFor(model => model.AssetLocation.Name, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(m => m.AssetLocation.Name, null, new { @class = "text-danger" })
                                         </div>
                                         <div class="form-group">
-                                            @Html.HiddenFor(model => model.ProductModel.Id)
-                                            @Html.LabelFor(model => model.ProductModel.Name)
-                                            @Html.TextBoxFor(model => model.ProductModel.Name, new { @class = "form-control" })
-                                            @Html.ValidationMessageFor(m => m.ProductModel.Name, null, new { @class = "text-danger" })
-                                        </div>
-                                        <div class="form-group">
-                                            @Html.LabelFor(model => model.ProductModel.Code)
-                                            @Html.TextBoxFor(model => model.ProductModel.Code, new { @class = "form-control" })
-                                            @Html.ValidationMessageFor(m => m.ProductModel.Code, null, new { @class = "text-danger" })
+                                            @Html.LabelFor(model => model.AssetLocation.ShortName)
+                                            @Html.TextBoxFor(model => model.AssetLocation.ShortName, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(m => m.AssetLocation.ShortName, null, new { @class = "text-danger" })
 
                                         </div>
-                                        <div class="form-group">
-                                            @Html.LabelFor(model => model.ProductModel.Description)
-                                            @Html.TextBoxFor(model => model.ProductModel.Description, new { @class = "form-control" })
-                                            @Html.ValidationMessageFor(m => m.ProductModel.Description, null, new { @class = "text-danger" })
-
-                                        </div>
+                                        
 
 
 
@@ -158,12 +145,12 @@
                         </th>
                         <th>
 
-                            Code
+                            Short Name
 
                         </th>
                         <th>
 
-                            Description
+                            Organization Id
 
                         </th>
                         <th>
@@ -199,8 +186,9 @@
 
 
 
-    <script src="~/Scripts/ProductModel/ProductModel.js"></script>
+    <script src="~/Scripts/AssetLocation/AssetLocation.js"></script>
 
 
 
 }
+

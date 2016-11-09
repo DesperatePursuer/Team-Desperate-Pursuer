@@ -78,12 +78,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\AssetPurchaseEntry.cs" />
+    <Compile Include="Models\AssetRegistration.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\GeneralCategory.cs" />
+    <Compile Include="Models\AssetLocation.cs" />
     <Compile Include="Models\Organization.cs" />
     <Compile Include="Models\OrganizationBranch.cs" />
     <Compile Include="Models\ProductModel.cs" />
     <Compile Include="Models\SubCategory.cs" />
+    <Compile Include="Models\ViewModels\AssetLocationVM.cs" />
     <Compile Include="Models\ViewModels\AssetPurchaseEntryVM.cs" />
     <Compile Include="Models\ViewModels\CategoryCreateVM.cs" />
     <Compile Include="Models\ViewModels\GeneralCategoryCreateVM.cs" />

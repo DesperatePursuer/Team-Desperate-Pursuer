@@ -30,3 +30,4 @@ C:\Users\Abdut Tawab\Documents\Visual Studio 2015\Projects\AssetTrackingSystem\A
 C:\Users\Abdut Tawab\Documents\Visual Studio 2015\Projects\AssetTrackingSystem\AssetTrackingSystem.DAL\obj\Debug\AssetTrackingSystem.DAL.Migrations.upgrade3.resources
 C:\Users\Abdut Tawab\Documents\Visual Studio 2015\Projects\AssetTrackingSystem\AssetTrackingSystem.DAL\obj\Debug\AssetTrackingSystem.DAL.Migrations.addingproduct_model.resources
 C:\Users\Abdut Tawab\Documents\Visual Studio 2015\Projects\AssetTrackingSystem\AssetTrackingSystem.DAL\obj\Debug\AssetTrackingSystem.DAL.Migrations.AssetPurchaseEntry_Add.resources
+C:\Users\Abdut Tawab\Documents\Visual Studio 2015\Projects\AssetTrackingSystem\AssetTrackingSystem.DAL\obj\Debug\AssetTrackingSystem.DAL.Migrations.Adding_AssetLocation.resources

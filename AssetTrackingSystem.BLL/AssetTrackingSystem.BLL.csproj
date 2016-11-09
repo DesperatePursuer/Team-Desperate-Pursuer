@@ -45,6 +45,7 @@
     <Compile Include="Asset\ProductModelManager.cs" />
     <Compile Include="Asset\SubCategoryManager.cs" />
     <Compile Include="Operation\AssetPurchaseEntryManager.cs" />
+    <Compile Include="Organization\AssetLocationManager.cs" />
     <Compile Include="Organization\OrganizationBranchManager.cs" />
     <Compile Include="Organization\OrganizationManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

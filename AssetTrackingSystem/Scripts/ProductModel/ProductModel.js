@@ -19,6 +19,74 @@
 });
 
 
+function AutoCategory(generalCategoryId) {
+    var id = generalCategoryId;
+
+
+
+    $.ajax({
+
+
+
+        url: "/ProductModel/GetCategoriesByGeneralCategory/" + id,
+        type: "GET",
+        contentType: "application/json;charset=UTF-8",
+        dataType: "json",
+
+
+
+
+        success: function (data) {
+            // get json data list
+            $.each(data, function (key, category) {
+
+                var optionText = "<option value='" + category.Id + "'>" + category.Name + "</option>";
+               
+                $('#CategoryId').prepend(optionText);
+            });
+
+
+        }
+
+
+    });
+}
+
+
+function AutoSubCategoryList(categoryId) {
+    var id = categoryId;
+
+
+
+    $.ajax({
+
+
+
+        url: "/ProductModel/GetSubCategoryByCategory/" + id,
+        type: "GET",
+        contentType: "application/json;charset=UTF-8",
+        dataType: "json",
+
+
+
+
+        success: function (data) {
+            // get json data list
+            $.each(data, function (key, category) {
+
+                var optionText = "<option value='" + category.Id + "'>" + category.Name + "</option>";
+                $('#subcategoryId').prepend(optionText);
+            });
+
+
+        }
+
+
+    });
+
+}
+
+
 function GetCategoriesByGeneralCategory() {
     
     $("#GeneralCategoryId").change(function () {
@@ -55,6 +123,8 @@ function GetCategoriesByGeneralCategory() {
     });
 
 }
+
+
 
 function GetSubCategoryByCategory() {
 
@@ -202,8 +272,11 @@ function getbyID(id) {
         success: function (result) {
 
             $('#GeneralCategoryId').val(result.SubCategory.Category.GeneralCategoryId);
+            AutoCategory(result.SubCategory.Category.GeneralCategoryId);
             $('#CategoryId').val(result.SubCategory.CategoryId);
+            AutoSubCategoryList(result.SubCategory.CategoryId);
             $('#subcategoryId').val(result.SubCategoryId);
+            
             $('#ProductModel_Id').val(result.Id);
             $('#ProductModel_Name').val(result.Name);
 

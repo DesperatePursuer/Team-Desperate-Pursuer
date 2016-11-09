@@ -86,8 +86,13 @@
     <Compile Include="Migrations\201611040525392_AssetPurchaseEntry_Add.Designer.cs">
       <DependentUpon>201611040525392_AssetPurchaseEntry_Add.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611091506136_Adding_AssetLocation.cs" />
+    <Compile Include="Migrations\201611091506136_Adding_AssetLocation.Designer.cs">
+      <DependentUpon>201611091506136_Adding_AssetLocation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Operation\AssetPurchaseEntryRepository.cs" />
+    <Compile Include="Organization\AssetLocationRepository.cs" />
     <Compile Include="Organization\OrganizationBranchRepository.cs" />
     <Compile Include="Organization\OrganizationRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -126,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611040525392_AssetPurchaseEntry_Add.resx">
       <DependentUpon>201611040525392_AssetPurchaseEntry_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611091506136_Adding_AssetLocation.resx">
+      <DependentUpon>201611091506136_Adding_AssetLocation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -36,7 +36,7 @@ function SearchOrganization() {
 
             if (data.length > 0) {
                 var $data = $('<table ></table>').addClass('table table-striped table-advance table-hover');
-                var header = "<thead><tr><th><i class='icon_profile'></i> Name</th><th><i class='icon_info_alt'></i> Short Name</th><th><i class='icon_document'></i> Code</th><th><i class='icon_pin_alt'></i> Location</th><th><i class='icon_cogs'></i> Action</th></tr></thead>";
+                var header = "<thead><tr><th><i class='icon_profile'></i> Name</th><th><i class='icon_info_alt'></i> Short Name</th><th><i class='icon_document'></i> Code</th><th><i class='icon_pin_alt'></i> AssetLocation</th><th><i class='icon_cogs'></i> Action</th></tr></thead>";
                 $data.append(header);
 
                 $.each(data, function (i, row) {
@@ -72,7 +72,7 @@ function LoadOrganization() {
         success: function (d) {
             if (d.length > 0) {
                 var $data = $('<table id="tblOrganizationHome"></table>').addClass('table table-striped table-advance table-hover');
-                var header = "<thead><tr><th><i class='icon_profile'></i> Name</th><th><i class='icon_info_alt'></i> Short Name</th><th><i class='icon_document'></i> Code</th><th><i class='icon_pin_alt'></i> Location</th><th><i class='icon_cogs'></i> Action</th></tr></thead>";
+                var header = "<thead><tr><th><i class='icon_profile'></i> Name</th><th><i class='icon_info_alt'></i> Short Name</th><th><i class='icon_document'></i> Code</th><th><i class='icon_pin_alt'></i> AssetLocation</th><th><i class='icon_cogs'></i> Action</th></tr></thead>";
                 $data.append(header);
 
                 $.each(d, function (i, row) {
@@ -132,7 +132,7 @@ function loadData() {
                 data: "Code"
             },
             {
-                data: "Location"
+                data: "AssetLocation"
             },
             {
                render: function(data, type, organization) {

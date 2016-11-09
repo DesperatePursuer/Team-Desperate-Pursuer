@@ -250,6 +250,7 @@
     <Content Include="Content\DataTables\css\mixins.scss" />
     <Content Include="Content\DataTables\css\common.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\AssetLocation\AssetLocation.js" />
     <Content Include="Scripts\AssetPurchaseEntry\AssetPurchaseEntry.js" />
     <Content Include="Scripts\Category\Category.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.js" />
@@ -343,6 +344,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AssetLocationController.cs" />
     <Compile Include="Controllers\AssetPurchaseEntryController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\GeneralCategoryController.cs" />
@@ -374,6 +376,7 @@
     <Content Include="Views\SubCategory\Index.cshtml" />
     <Content Include="Views\ProductModel\Index.cshtml" />
     <Content Include="Views\AssetPurchaseEntry\Index.cshtml" />
+    <Content Include="Views\AssetLocation\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
